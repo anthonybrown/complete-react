@@ -8,7 +8,7 @@ module.exports = {
     path: path.join(__dirname, '/public'),
     filename: 'bundle.js'
   },
-	devServer: {
+  devServer: {
     publicPath: '/public'
   },
   resolve: {
@@ -21,12 +21,12 @@ module.exports = {
   },
   module: {
     rules: [
-			{
+      {
         enforce: 'pre',
-				test: /\.js$/,
+        test: /\.js$/,
         loader: 'eslint-loader',
         exclude: /node_modules/
-			},
+      },
       {
         include: path.resolve(__dirname, 'js'),
         test: /\.js$/,
